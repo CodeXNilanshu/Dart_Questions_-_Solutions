@@ -1,6 +1,8 @@
 /// write notes of programs here only in the documents comments.
 /// I have turn off the Gemini suggestions & auto complete for this project so whenever you start making a project - turn it on. It's really helpful.
 
+//----------------------------------------------------------------------------------------------------------
+
 //1. Write a program in Dart that finds simple interest.
 // Formula= (p * t * r) / 100
 
@@ -16,6 +18,8 @@
 //   print("Si:$si");
 // }
 //
+
+//----------------------------------------------------------------------------------------------------------
 
 //2. Write a program to print a square of a number using user input.
 
@@ -95,6 +99,8 @@ void main() {
       The logic: The second ?? 0.0 is your safety net. It says: "If tryParse returned a number, use it. But if tryParse returned null (because the input was empty or invalid), set the variable to 0.0."
    */
 
+//----------------------------------------------------------------------------------------------------------
+
 // 3. Write a program to find quotient and remainder of two integers.
 //code :
 
@@ -126,6 +132,8 @@ void main() {
     int % double = double
     double % double = double
     */
+
+//----------------------------------------------------------------------------------------------------------
 
 //4. Write a program to swap two numbers.
 //code :
@@ -191,6 +199,8 @@ void main() {
 }
  */
 
+//----------------------------------------------------------------------------------------------------------
+
 //5. Write a program in Dart to remove all whitespaces from String.
 //code:
 
@@ -218,6 +228,8 @@ void main() {
  *
  */
 
+//----------------------------------------------------------------------------------------------------------
+
 //6. Write a Dart program to convert String to int.
 //code:
 
@@ -228,5 +240,7 @@ void main() {
   print(n);
 }
  */
+
+//----------------------------------------------------------------------------------------------------------
 
 //7.Suppose, you often go to restaurant with friends and you have to split amount of bill. Write a program to calculate split amount of bill. Formula= (total bill amount) / number of people
