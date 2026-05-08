@@ -244,3 +244,31 @@ void main() {
 //----------------------------------------------------------------------------------------------------------
 
 //7.Suppose, you often go to restaurant with friends and you have to split amount of bill. Write a program to calculate split amount of bill. Formula= (total bill amount) / number of people
+//code:
+//
+// import 'dart:io';
+//
+// void main() {
+//   print('Enter the bill amount:');
+//   int billAmount = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+//   print('Enter the number of people');
+//   int numberOfPeople = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+//
+//   print('Spit amount per person is: ${billAmount / numberOfPeople}');
+// }
+
+//----------------------------------------------------------------------------------------------------------
+
+//8.Suppose, your distance to office from home is 25 km and you travel 40 km per hour. Write a program to calculate time taken to reach office in minutes. Formula= (distance) / (speed)
+//code :
+//
+// void main() {
+//   double distance = 25;
+//   double speed = 40;
+//
+// //so time taken to reach office is
+//   double time = distance / speed; // km/her
+//   print('${time * 60} minutes');
+// }
+
+//----------------------------------------------------------------------------------------------------------
