@@ -122,19 +122,51 @@ import 'dart:io';
 //6.Write a program in Dart to reverse a String using function.
 //code:
 
-void main() {
-  String s = 'I am a hero';
-  void reverseString() {
-    for (int i = s.length - 1; i >= 0; i--) {
-      stdout.write(s[i]);
-    }
-  }
+/**
+ * In Dart (and most programming languages), strings are zero-indexed. This means if a string has a length of 11, the characters are positioned from 0 to 10.
 
-  reverseString();
-  /**
+ */
+
+// void main() {
+//   String s = 'I am a hero';
+//   void reverseString() {
+//     for (int i = s.length - 1; i >= 0; i--) {
+//       stdout.write(s[i]);
+//     }
+//   }
+//
+//   reverseString();
+
+/**
    The list won't work because it will reverse the list not the string. basically if there are 3 string ['cat', 'dog', 'monkey'] it will reverse it's order not the actual words
    */
-  // List<String> RS = ['I am a hero'];
-  // String S = RS.reversed.toString();
-  // print(S);
+// List<String> RS = ['I am a hero'];
+// String S = RS.reversed.toString();
+// print(S);
+
+//}
+
+//--------------------------------------------------------------------------------------------------------
+
+//7.Write a program in Dart to calculate power of a certain number. For e.g 5^3=125
+//code:
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  stdout.write('Enter the number: ');
+  int f1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+  stdout.write('Enter the power: ');
+  int p1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+
+  int power = pow(f1, p1).toInt();
+  calculatePower() {
+    //  for (int i = 1; i <= p1; i++) {}
+    // num power = pow(f1, p1);
+  }
+
+  print(power);
 }
+
+//--------------------------------------------------------------------------------------------------------
