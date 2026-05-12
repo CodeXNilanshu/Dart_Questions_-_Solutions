@@ -335,5 +335,50 @@ import 'dart:math';
 /**
  question : why the age and true isn't printing here in the console when we run it?
 
+    => The reason only the name is printing is because of how the return keyword works in programming.
+
+    The Problem:
+
+   1. The return rule: As soon as a function hits a return statement, it immediately stops and sends that single value back to where it was called. Anything written on the lines below return is ignored (this is called "unreachable code").
+
+   2. Default Parameters: In Dart, to give a parameter a default value, you must wrap it in curly braces {}.
+
+    The Solution :
+
+    To print all three values, you should return a single object (like a String or a Map) that contains all the data.
 
  */
+
+/// Here is the corrected code using Named Parameters (the standard way to handle default values in Dart):
+
+// Q11. Write a function in Dart called createUser with parameters name, age, and isActive,
+
+// where isActive has a default value of true.
+
+// We use { } to make parameters optional/named and assign a default value
+
+// String createUser(String name, int age, {bool isActive = true}) {
+//   return "name: $name, age: $age, isActive: $isActive";
+// }
+//
+// void main() {
+//   // Since isActive has a default value, we don't even need to pass it!
+//   print(createUser('N', 5));
+//
+//   // Or we can override it if we want:
+//   print(createUser('S', 10, isActive: false));
+// }
+
+//--------------------------------------------------------------------------------------------------------
+
+//12. Write a function in Dart called calculateArea that calculates the area of a rectangle. It should take length and width as arguments, with a default value of 1 for both. Formula: length * width.
+//code:
+//
+// double calculateArea({double length = 1, double width = 1}) {
+//   return length * width;
+// }
+//
+// void main() {
+//   print(calculateArea());
+//   print(calculateArea(length: 5, width: 7));
+// }
