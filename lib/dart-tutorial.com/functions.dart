@@ -78,6 +78,7 @@
 //code:
 
 import 'dart:io';
+import 'dart:math';
 
 /// Yk i spend a lot of time and solved this on my own - i just take reference of defining the string from stack overflow and searched small things like syntax, but i am proud i did it myself. Like all the question I am doing myself only but this was looking tough initially but it is not. I also read the documentation of different methods of dart inside the android studio
 //
@@ -150,23 +151,189 @@ import 'dart:io';
 
 //7.Write a program in Dart to calculate power of a certain number. For e.g 5^3=125
 //code:
-
-import 'dart:io';
-import 'dart:math';
-
-void main() {
-  stdout.write('Enter the number: ');
-  int f1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-  stdout.write('Enter the power: ');
-  int p1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-
-  int power = pow(f1, p1).toInt();
-  calculatePower() {
-    //  for (int i = 1; i <= p1; i++) {}
-    // num power = pow(f1, p1);
-  }
-
-  print(power);
-}
+//
+// import 'dart:io';
+// import 'dart:math';
+//
+// void main() {
+//   stdout.write('Enter the number: ');
+//   int f1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+//   stdout.write('Enter the power: ');
+//   int p1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+//
+//   int power = pow(f1, p1).toInt();
+//
+//   print(power);
+// }
 
 //--------------------------------------------------------------------------------------------------------
+
+//8. Write a function in Dart named add that takes two numbers as arguments and returns their sum.
+//code :
+
+// void main() {
+//   double add(double a, double b) {
+//     return a + b;
+//   }
+//
+//   print(add(5, 2));
+// }
+
+//--------------------------------------------------------------------------------------------------------
+
+//9. Write a function in Dart called maxNumber that takes three numbers as arguments and returns the largest number.
+//code:
+
+//Method 1:
+
+//void main() {
+//fn{}
+//a b c argument
+//return largest - if a>b & a>c then a is largest and repeat for other conditions
+
+//   int a, b, c;
+//   void maxNumber(a, b, c) {
+//     if (a > b && a > c) {
+//       print(a);
+//     } else if (b > c && b > a) {
+//       print(b);
+//     } else if (c > a && c > b) {
+//       print(c);
+//     } else {
+//       print('Invalid input');
+//     }
+//   }
+//
+//   maxNumber(5, 4, 7);
+//   maxNumber(74, 474747, 4);
+// }
+
+//Method 2:
+///this max allow only two positional arguments, so we did the operations multiple times and saved the response and then used those response and did the operation again.
+//
+// void main() {
+//   int a = 500;
+//   int b = 88;
+//   int c = 2229;
+//
+//   int x = max(a, b);
+//   int y = max(b, c);
+//
+//   int largestNum = max(x, y);
+//
+//   print(largestNum);
+// }
+
+//--------------------------------------------------------------------------------------------------------
+
+//10. Write a function in Dart called isEven that takes a number as an argument and returns True if the number is even, and False otherwise.
+//code:
+
+// Method 1 :
+// void main() {
+//   void isEven(int n) {
+//     print(n.isEven);
+//   }
+//
+//   isEven(8);
+// }
+
+/**
+    Your code is partially correct in its logic, but it does not strictly follow the instructions of the question.
+
+    Here are the three main issues:
+
+    1. Return Value: The question asks the function to return True or False. Your function currently prints the result and returns nothing (void).
+
+   2. Case Sensitivity: In Dart, the boolean values are lowercase (true and false). The question asks for True/False (likely a general logic question), but in code, they must be lowercase.
+
+    3. Function Scope: While "local functions" (putting a function inside main) are allowed in Dart, it is standard practice to define functions outside of main.
+ */
+
+///Here is the corrected version:
+
+//Method 2:
+//
+// bool isEven(int n) {
+//   return n % 2 == 0;
+// }
+//
+// void main() {
+//   print(isEven(8));
+// }
+
+///Here we didn't solved the case sensitivity problem so :
+//Method 3: Return a String
+//
+// String isEven(int n) {
+//   if (n % 2 == 0) {
+//     return 'True';
+//   } else {
+//     return 'False';
+//   }
+// }
+//
+// void main() {
+//   print(isEven(6));
+// }
+
+//Method 4: Return a Boolean and format the output
+///In professional programming, we usually keep the logic as a bool (lowercase) and only capitalize it when we show it to the user.
+
+// bool isEven(int n) {
+//   return n.isEven;
+// }
+//
+// void main() {
+//   bool result = isEven(7);
+//
+//   // Logic to capitalize the first letter when printing
+//   if (result) {
+//     print('True');
+//   } else {
+//     print('False');
+//   }
+// }
+
+/**
+    how this code works ? I mean we didn't say result should be true to print "True" how did it decide ?
+
+    => This is a great question! It touches on how Boolean logic works in programming.
+    In the line if (result), you are not explicitly writing == true, but Dart (and most languages) understands it automatically.
+
+    Here is the breakdown: The "Hidden" Comparison
+
+    When you write:
+    if (result) { ... }
+
+    It is exactly the same as writing:
+    if (result == true) { ... }
+
+    The if statement only cares about one thing: Is the value inside the parentheses true?
+    If result is already true, the condition is satisfied.
+    If result is false, the condition fails and it moves to the else.
+ */
+
+//--------------------------------------------------------------------------------------------------------
+
+//11. Write a function in Dart called createUser with parameters name, age, and isActive, where isActive has a default value of true.
+//code:
+
+///This is wrong way to do it and the explanation is below this code
+// bool isActive = true;
+//
+// dynamic createUser(String name, int age, isActive) {
+//   return name;
+//   age;
+//   isActive;
+// }
+//
+// void main() {
+//   print(createUser('Nilanshu', 24, isActive));
+// }
+
+/**
+ question : why the age and true isn't printing here in the console when we run it?
+
+
+ */
