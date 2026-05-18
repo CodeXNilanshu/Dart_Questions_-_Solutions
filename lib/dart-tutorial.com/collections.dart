@@ -145,3 +145,62 @@ import 'dart:io';
 // }
 
 //----------------------------------------------------------------------------------------------------------
+
+//6. Create a map with name, address, age, country keys and store values to it. Update country name to other country and print all keys and values.
+//code:
+
+// Map<String, String> employee = {
+//   'name': 'Nilanshu',
+//   'address': 'Delhi',
+//   'age': '24',
+//   'country': 'India',
+// };
+//
+// void main() {
+//   employee.update('country', (value) => 'USA');
+//   print(employee);
+// }
+
+//----------------------------------------------------------------------------------------------------------
+
+//7. Create a map with name, phone keys and store some values to it. Use where to find all keys that have length 4.
+//code:
+
+Map<String, dynamic> individuals = {'name': 'Laptop', 'phone': 9999888877};
+
+void main() {
+  var keysWithLengthFour =
+      individuals.keys.where((key) => key.length == 4).toList();
+  print(keysWithLengthFour);
+}
+
+/**
+ *
+ * Is it possible with map ?
+ => The short answer is no, you cannot use .where() directly on a Map in Dart.
+
+    The .where() method belongs to the Iterable class (used by Lists and Sets). However, you can achieve this by accessing the .keys property of the Map, which returns an Iterable of the keys.
+    Here is how you can solve the problem:
+ */
+
+// 1. Get the keys
+// 2. Use .where to filter keys with length 4
+// 3. Convert to list to print
+
+/**
+ * Why doesn't Map have .where()?
+ *
+ => A Map is a collection of Key-Value pairs. When you "filter" a map, Dart needs to know if you want to filter by the key, the value, or the entire entry.
+   If you want to filter the entire Map (keeping both keys and values) based on the key length, you should use .removeWhere() or Map.fromEntries():
+
+    Summary for your notes:
+
+    Lists/Sets: Use .where().
+Maps: Use .keys.where() (to find keys) or .removeWhere() (to filter the map itself)
+    */
+
+//------------------------------------------------------------------------------------------------------
+
+//8. Create a simple to-do application that allows user to add, remove, and view their task.
+//code
+//----------------------------------------------------------------------------------------------------------
